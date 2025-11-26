@@ -193,18 +193,18 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: "John Smith",
+                name: "Mr. Yosef Yacob",
                 role: "Construction Manager",
                 text: "Con-I has transformed how we find contractors. The bidding process is seamless.",
               },
               {
-                name: "Sarah Johnson",
+                name: "Sarah Kebede",
                 role: "Contractor",
                 text: "I love the platform. Finding quality projects has never been easier.",
               },
               {
-                name: "Mike Davis",
-                role: "Project Owner",
+                name: "Daniel Mekonnen",
+                role: "Project Coordinator",
                 text: "The AI matching is incredible. We get the right contractors every time.",
               },
             ].map((testimonial, idx) => (

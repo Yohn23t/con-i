@@ -150,7 +150,7 @@ export default function JobMatchingPage() {
 
   return (
     <div className="flex min-h-screen bg-background">
-      <DashboardSidebar userType={user?.role || "contractor"} />
+      
 
       <main className="flex-1 overflow-auto">
         <div className="container mx-auto px-4 py-8">

@@ -11,10 +11,6 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const { theme, toggleTheme, mounted } = useTheme()
 
-  if (!mounted) {
-    return null
-  }
-
   const handleLinkClick = () => {
     setIsOpen(false)
   }
@@ -44,13 +40,15 @@ export function Navbar() {
           </div>
 
           <div className="flex items-center gap-4">
-            <button
-              onClick={toggleTheme}
-              className="p-2 hover:bg-muted rounded-lg transition-colors duration-200"
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
+            {mounted && (
+              <button
+                onClick={toggleTheme}
+                className="p-2 hover:bg-muted rounded-lg transition-colors duration-200"
+                aria-label="Toggle theme"
+              >
+                {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+              </button>
+            )}
 
             <div className="hidden md:flex gap-2">
               <Button variant="outline" asChild>

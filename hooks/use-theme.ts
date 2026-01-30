@@ -12,6 +12,13 @@ export function useTheme() {
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
     const initialTheme = savedTheme || (prefersDark ? "dark" : "light")
     setTheme(initialTheme)
+    
+    // Apply theme class on mount
+    if (initialTheme === "dark") {
+      document.documentElement.classList.add("dark")
+    } else {
+      document.documentElement.classList.remove("dark")
+    }
   }, [])
 
   const toggleTheme = useCallback(() => {

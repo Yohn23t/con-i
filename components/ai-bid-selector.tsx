@@ -52,7 +52,7 @@ export function AIBidSelector({ projectId, bids, onSelectBid, onClose }: Props) 
           setProjectBudget(projectData.budget_max || projectData.budget_min || 0)
         }
       } catch (error) {
-        console.log("[v0] Failed to fetch project budget:", error)
+        // Failed to fetch project budget
       }
 
       const details = new Map()
@@ -79,7 +79,7 @@ export function AIBidSelector({ projectId, bids, onSelectBid, onClose }: Props) 
             })
           }
         } catch (error) {
-          console.log("[v0] Failed to fetch contractor details, using defaults:", error)
+          // Failed to fetch contractor details, using defaults
           details.set(bid.id, {
             rating: 3.5,
             years_experience: 5,

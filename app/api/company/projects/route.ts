@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const { name, category, location, budget, description, deadline, companyId } = body
 
-    console.log("[v0] Creating project:", { name, category, location, budget, description, deadline, companyId })
+    
 
     if (!companyId) {
       return NextResponse.json({ error: "Company ID is required" }, { status: 400 })
@@ -47,11 +47,11 @@ export async function POST(request: NextRequest) {
       RETURNING id, title, description, budget_max, timeline_end, status, category, location
     `
 
-    console.log("[v0] Project created:", result[0])
+    
 
     return NextResponse.json({ success: true, project: result[0] })
   } catch (error) {
-    console.error("[v0] Failed to create project:", error)
+    console.error("Failed to create project:", error)
     return NextResponse.json({ error: "Failed to create project" }, { status: 500 })
   }
 }

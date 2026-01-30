@@ -13,7 +13,6 @@ export const metadata: Metadata = {
   title: "Con-I - Construction Bidding Platform",
   description:
     "Connect construction companies with contractors. Post projects, submit bids, and manage your construction business.",
-  generator: "v0.app",
 }
 
 export default function RootLayout({

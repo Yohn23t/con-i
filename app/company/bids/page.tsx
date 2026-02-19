@@ -28,7 +28,6 @@ export default function BidsPage() {
         const response = await fetch(`/api/company/bids?companyId=${user.companyId}`)
         const data = await response.json()
         setBids(Array.isArray(data) ? data : [])
-        console.log("[v0] Fetched bids:", data)
       } catch (error) {
         console.error("Failed to fetch bids:", error)
         setBids([])
